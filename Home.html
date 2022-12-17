@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/HomeStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
+        integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css"
+        integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/regular.min.css"
+        integrity="sha512-k2UAKyvfA7Xd/6FrOv5SG4Qr9h4p2oaeshXF99WO3zIpCsgTJ3YZELDK0gHdlJE5ls+Mbd5HL50b458z3meB/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/v5-font-face.min.css"
+        integrity="sha512-5V4m5oBRPLC2aZloM2/C/Simvm/jRfHXcqxTC6iW3FS93jfEWEFmJ7dWqAHME6CGlAG4StQ3f7kN41EUjEFJUQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/modal.css">
+    <title>معركة مود التكتيكية </title>
+</head>
+
+<body id="background">
+
+    <div>
+        <div id="headline" style="align-items: center; text-align-last: center;">
+            <img src="./images/logo.jpg" width="100">
+            <h1 style="display: inline;">معركة مود التكتيكية</h1>
+            <img src="./images/logo.jpg" width="100">
+        </div>
+    </div>
+    <div id="content">
+        <div class="players">
+            <div class="team" id="1">
+                <div class="name"><span contenteditable="true">الفريق الأول</span> <span><i class="fas fa-square"
+                            style="color: rgb(255, 96, 96);"></i></span></div>
+                <div class="score" contenteditable="true">230</div>
+            </div>
+            <div class="playerList" id="teamOne">
+                <input type="text">
+            </div>
+            <button onclick="addField('teamOne')">إضافة لاعب</button>
+        </div>
+        <div>
+            <table class="tg" dir="rtl">
+                <thead>
+                    <tr>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <th class="tg-0pky"></th>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td id="imageContainer" colspan="9" rowspan="6"><img id="image" src="./images/logo.jpg"
+                                alt="START"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                        <td class="tg-0pky"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="players">
+            <div class="team" id="2">
+                <div class="name"><span contenteditable="true">الفريق الثاني</span> <span><i class="fas fa-square"
+                            style="color: rgb(255, 96, 96);"></i></span></div>
+                <div class="score" contenteditable="true">230</div>
+            </div>
+            <div class="playerList" id="teamTwo">
+                <input type="text">
+            </div>
+            <button onclick="addField('teamTwo')">إضافة لاعب</button>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="GameOverModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="GameOverWinner"></h2>
+            </div>
+
+            <div class="modal-footer">
+                <button id="restartGameButton" onclick="location.reload()" style="cursor: pointer;">إعادة
+                    اللعب</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="./photos.js"></script>
+<script src="./GameManager.js"></script>
+
+</html>
