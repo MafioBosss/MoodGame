@@ -41,23 +41,23 @@ function getDarkColor() {
 function updatePhoto(photoIndex) {
     let image = document.getElementById("image");
     image.setAttribute("src", (`./images/${photoIndex}.jpg`));
-    console.log(photoIndex);
+    // console.log(photoIndex);
 }
 function CalculateTeamPoints(points, teamTurn) {
-    console.log(`Picture value: ${points}`);
+    // console.log(`Picture value: ${points}`);
     if (teamTurn == 1) {
-        document.getElementById("1").getElementsByClassName("score")[0].textContent = 
-        parseInt(document.getElementById("1").getElementsByClassName("score")[0].textContent) + points;
+        document.getElementById("1").getElementsByClassName("score")[0].textContent =
+            parseInt(document.getElementById("1").getElementsByClassName("score")[0].textContent) + points;
     }
     if (teamTurn == 2) {
-        document.getElementById("2").getElementsByClassName("score")[0].textContent = 
-        parseInt(document.getElementById("2").getElementsByClassName("score")[0].textContent) + points;
+        document.getElementById("2").getElementsByClassName("score")[0].textContent =
+            parseInt(document.getElementById("2").getElementsByClassName("score")[0].textContent) + points;
     }
 }
 
 
 function ChangeTeamIndicator(teamTurn) {
-    console.log(`team: ${teamTurn}`);
+    // console.log(`team: ${teamTurn}`);
     if (teamTurn == 1) {
         document.getElementById("1").getElementsByTagName("i")[0].style.display = "none";
         document.getElementById("2").getElementsByTagName("i")[0].style.display = "inline";
@@ -67,7 +67,7 @@ function ChangeTeamIndicator(teamTurn) {
         document.getElementById("2").getElementsByTagName("i")[0].style.display = "none";
     }
     teamTurn = teamTurn == 1 ? 2 : 1;
-    console.log(`team: ${teamTurn}`);
+    // console.log(`team: ${teamTurn}`);
 }
 function SwapScores() {
     var holder = document.getElementById("1").getElementsByClassName("score")[0].textContent;
@@ -75,21 +75,25 @@ function SwapScores() {
     document.getElementById("2").getElementsByClassName("score")[0].textContent = holder;
 }
 
-var lastCardIndex; 
+var lastCardIndex;
 function handleEntry(photoIndex, teamTurn) {
     var points = photos[photoIndex];
-    if (photoIndex == 33) points = Math.floor(Math.random() * (10 - -10 + 1) + -10);
+    if (photoIndex == 33) {
+        points = Math.floor(Math.random() * (10 - -10 + 1) + -10);
+        alert(`نتيجة الروليت ${points}`);
+    };
     if (points == "GAMEOVER") {
         document.getElementById("GameOverModal").style.display = "block";
         document.getElementById("GameOverWinner").textContent = `أنتهت اللعبة! لقد فاز ${document.getElementById(teamTurn).getElementsByClassName("name")[0].textContent}`;
+        document.getElementById(teamTurn == 1 ? 2 : 1).getElementsByClassName("score")[0].textContent == 0;
         return;
     }
     else if (points == "SWAPSCORES") {
-        alert("تم تبديل نتيجة الفريقين!");
+        // alert("تم تبديل نتيجة الفريقين!");
         SwapScores();
     }
     else if (points == "PRISON") {
-        alert("الفريق الثاني حيختار كرتين!");
+        // alert("الفريق الثاني حيختار كرتين!");
         ChangeTeamIndicator(teamTurn);
         return;
     } else {
@@ -117,7 +121,7 @@ function FillTextButtons() {
         const icon = document.createElement("h3");
 
         buttons[index].setAttribute("onClick", `buttonClicked(${photosId[index]}); this.removeAttribute("onClick");disableButton(this);`);
-        
+
         if (index < 13 || (index > 36 && index < buttons.length)) {
             icon.textContent = numbers;
             numbers++;
@@ -143,5 +147,5 @@ function addField(teamId) {
     input.setAttribute("type", "text");
     document.getElementById(teamId)
         .appendChild(input);
-    console.log(teamId);
+    // console.log(teamId);
 }
