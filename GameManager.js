@@ -80,7 +80,7 @@ function handleEntry(photoIndex, teamTurn) {
     var points = photos[photoIndex];
     if (photoIndex == 33) {
         points = Math.floor(Math.random() * (10 - -10 + 1) + -10);
-        alert(`نتيجة الروليت ${points}`);
+        // alert(`نتيجة الروليت ${points}`);
     };
     if (points == "GAMEOVER") {
         document.getElementById("GameOverModal").style.display = "block";
